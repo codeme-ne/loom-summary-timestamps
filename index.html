@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom Transcript Zusammenfasser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Loom Transcript Zusammenfasser</h1>
+        
+        <div class="input-section">
+            <label for="transcript">Loom Transcript einfügen:</label>
+            <textarea id="transcript" placeholder="Fügen Sie hier Ihr Loom Transcript ein..."></textarea>
+        </div>
+        
+        <button id="summarizeBtn" class="summarize-btn">Zusammenfassung erstellen</button>
+        
+        <div class="output-section">
+            <div class="summary-container">
+                <label>Zusammenfassung:</label>
+                <div id="summary" class="output-box"></div>
+                <button id="copySummary" class="copy-btn">Zusammenfassung kopieren</button>
+            </div>
+            
+            <div class="timestamps-container">
+                <label>Zeitstempel:</label>
+                <div id="timestamps" class="output-box"></div>
+                <button id="copyTimestamps" class="copy-btn">Zeitstempel kopieren</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
