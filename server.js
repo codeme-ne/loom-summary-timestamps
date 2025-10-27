@@ -2,10 +2,18 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const https = require('https');
-require('dotenv').config();
+const fs = require('fs');
+const dotenv = require('dotenv');
+
+['.env', '.env.local'].forEach((file) => {
+    const envPath = path.join(__dirname, file);
+    if (fs.existsSync(envPath)) {
+        dotenv.config({ path: envPath, override: true });
+    }
+});
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -14,11 +22,16 @@ app.use(express.static('.'));
 
 // API-Schlüssel aus Umgebungsvariable
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
 
 function makeClaudeRequest(prompt) {
+    if (!ANTHROPIC_API_KEY) {
+        return Promise.reject(new Error('ANTHROPIC_API_KEY is not configured.'));
+    }
+
     return new Promise((resolve, reject) => {
         const postData = JSON.stringify({
-            model: 'claude-3-sonnet-20240229',
+            model: ANTHROPIC_MODEL,
             max_tokens: 1000,
             messages: [{
                 role: 'user',

@@ -36,3 +36,6 @@ coverage
 # Misc
 .DS_Store
 Thumbs.db 
+
+# Serena
+.serena
