@@ -2,6 +2,7 @@
   "name": "loom-zusammenfasser",
   "version": "1.0.0",
   "description": "Loom Transcript Zusammenfasser mit Claude AI",
+  "license": "MIT",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

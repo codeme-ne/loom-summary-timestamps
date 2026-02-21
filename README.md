@@ -33,4 +33,4 @@ Ein leichtgewichtiger Node/Express-Dienst, der Loom- oder Zoom-Transkripte an An
 - `.env.example` – Referenz für Konfiguration.
 
 ## Lizenz
-Kein Lizenztext hinterlegt. Ergänze eine passende Lizenz, falls das Repository öffentlich geteilt werden soll.
+Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
