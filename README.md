@@ -1,6 +1,16 @@
 # Loom Transcript Zusammenfasser
 
+[![Anthropic Claude](https://img.shields.io/badge/Anthropic-Claude_Sonnet-191919)](https://anthropic.com)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933)](https://nodejs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Ein leichtgewichtiger Node/Express-Dienst, der Loom- oder Zoom-Transkripte an Anthropic Claude weiterleitet, um eine kompakte Zusammenfassung und sortierte Zeitstempel in deutscher Sprache zu erzeugen. Die App kombiniert einen einfachen Proxy (`server.js`) mit einer statischen HTML/CSS/JS-Oberfläche für schnelle manuelle Workflows.
+
+> English: A lightweight Node/Express app that sends Loom/Zoom transcripts to Anthropic Claude and returns concise summaries plus sorted timestamps.
+
+## Live Demo
+- https://loom-summary-timestamps.vercel.app
 
 ![Screenshot der Weboberfläche](./Screenshot_Loom_Transkript_Zusammenfasser.png)
 
